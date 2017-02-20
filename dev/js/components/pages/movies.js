@@ -175,11 +175,6 @@ class Movies extends React.Component {
 					<Header />
 					<div className = "container" id = "all-gird">
 
-
-					<MyModal  show={this.state.showModal} onHide = {this.close.bind(this)}>{this.state.modalValue}</MyModal>
-
-
-
 						<div className = "row all-class-movies">
 							<div className = "col-lg-6 col-md-6 col-xs-12" id = "popular">
 									<Link to = "/movies/popular"><h3>Popular</h3></Link>
@@ -200,6 +195,11 @@ class Movies extends React.Component {
 									<hr/>
 								</div>				
 							</div>
+						</div>
+
+						<div className = "my-modal">
+
+							<MyModal show={this.state.showModal} onHide = {this.close.bind(this)}>{this.state.modalValue}</MyModal>
 						</div>
 
 						<div className = "container" id = "featured">
@@ -265,17 +265,3 @@ class Movies extends React.Component {
 
 export default Movies;
 
-/*
-
-			 				<Modal show={this.state.showModal} onHide={this.close} key = {index}>
-					          <Modal.Header>
-					            <Modal.Title>{value.original_title}</Modal.Title>
-					          </Modal.Header>
-					          <Modal.Body>
-					           		<p>{value.overview}</p>
-					          </Modal.Body>
-					          <Modal.Footer>
-					            <Button onClick={this.close.bind(this)}>Close</Button>
-					          </Modal.Footer>
-					        </Modal>
-		*/
