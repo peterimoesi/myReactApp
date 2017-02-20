@@ -1,0 +1,175 @@
+#video-background {
+
+	position: relative;
+	height: 500px;
+	top: 100px;
+	background-image: url('https://image.tmdb.org/t/p/w1300_and_h730_bestv2/r38utnwaWYRkWinxDrRyPviX81E.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center top;
+}
+#video-background header {
+	position: absolute;
+	background-color: black;
+	color: white;
+	opacity: 0.5;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+
+.header {
+	position: relative;
+	margin-top: 40px; 
+	color: red;
+	top: -100%;
+	left: 50%;
+	transform: translate(-50%, 50%);
+}
+body {
+		background-color: #f2f2f2;
+}
+.all-results {
+	margin-top: 50px; 
+	margin-bottom: 50px; 
+}
+
+.results {
+	margin-bottom: 20px; 
+}
+
+
+.navbar-form .form-control {
+	display: inline;
+}
+.form-control {
+	background: transparent;
+	max-width: 200px;
+}
+.nav-bottom{
+	width: auto;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.nav-bottom li {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.showGenre {
+	position: relative;
+	right: 50%;
+	transform: translateX(50%);
+}
+.class-navigation {
+	position: fixed;
+	width: 100%;
+	top: 50px;
+	z-index: 10;
+}
+.movielists {
+	margin-top: 120px;
+	margin-bottom: 120px; 
+}
+
+/*each movies*/
+.movies {
+	border: 0px solid white;
+	box-sizing: content-box;
+	background-color: white;
+	margin-bottom: 50px;
+	height: auto;
+}
+
+.text > p{
+	width: 200px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.latest {
+	white-space: pre-wrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.images {
+	margin-left: -15px;
+	height: 300px; 
+}
+.load-more {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+/*scroll-movies*/
+#popular{
+	position: relative;
+	height: 320px;
+	top: 100px;
+}
+#top-rated {
+		position: relative;
+		height: 320px;
+		top: 110px;
+	}
+#genre_actions{
+	position: relative;
+	height: 320px;
+	top: 150px;
+}
+#genre_adventure{
+	position: relative;
+	height: 320px;
+	top: 1500px;
+}
+hr {
+	position: relative;
+	top: 250px;
+}
+
+
+@media (max-width: 800px) {
+	.movies {
+	box-sizing: content-box;
+	margin-bottom: 40px; 
+	margin-right: 60px;
+	}
+	.text > p{
+		width: 200px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	#popular{
+	position: relative;
+	height: 500px;
+	top: 500px;
+	}
+	
+}
+
+@media (max-width: 700px) {
+		.movies {
+	box-sizing: content-box;
+	margin-bottom: 40px; 
+	margin-right: 60px;
+	}
+	.text > p{
+		width: 200px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.images{
+	height: 200px;
+	}
+	#popular{
+		height: 300px;
+		top: 50vh;
+	} 
+}
