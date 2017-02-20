@@ -7,7 +7,7 @@ class Logo extends React.Component {
 	constructor(){
 		super();
 		this.state = {
-			videoUrl: 'https://github.com/peterimoesi/reactapp/blob/master/dev/js/assets/suicide-squad.webm?raw=true',
+			videoUrl: 'https://github.com/peterimoesi/myReactApp/blob/master/dev/js/assets/suicide-squad.webm?raw=true',
 			pos: {x: 0, y: 0},
 			shadow: true,
 		}
@@ -47,8 +47,8 @@ class Logo extends React.Component {
 						 	Video not supported
 						</Video>
 						<header ref = "section">
-							<img ref = "playword_1" src = "https://github.com/peterimoesi/reactapp/blob/master/dev/js/assets/mylogo-1.png?raw=true"/>
-							<img ref = "playword_2" src = "https://github.com/peterimoesi/reactapp/blob/master/dev/js/assets/mylogo-2.png?raw=true"/>
+							<img ref = "playword_1" src = "https://github.com/peterimoesi/myReactApp/blob/master/dev/js/assets/mylogo-1.png?raw=true"/>
+							<img ref = "playword_2" src = "https://github.com/peterimoesi/myReactApp/blob/master/dev/js/assets/mylogo-2.png?raw=true"/>
 						</header>
 					</div>
 			)
