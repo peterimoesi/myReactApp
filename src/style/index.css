@@ -103,7 +103,7 @@ a h3 {
 	}
 }
 #all-gird {
-	padding-bottom: 300px;
+	padding-bottom: 10%;
 }
 
 /*frontpage movies img caption*/
@@ -198,68 +198,50 @@ a h3 {
 
 #genre_actions{
 	position: relative;
-	height: 320px;
+	box-sizing: border-box;
 	top: 130px;
+	padding-bottom: 10px;
 }
 #genre_adventure{
 	position: relative;
-	height: 320px;
+	box-sizing: border-box;
 	top: 130px;
+	padding-bottom: 10px;
 }
 #genre_comedy{
 	position: relative;
-	height: 320px;
-	top: 480px;
+	box-sizing: border-box;
+	top: 100px;
 }
 #genre_romance{
 	position: relative;
-	height: 320px;
-	top: 480px;
+	box-sizing: border-box;
+	top: 100px;
 }
 .genre-navigation {
 	position: relative;
-	margin-top: 900px; 
+	margin-top: 200px; 
 
 }
 @media (max-width: 500px) {
 	.genre-navigation {
-		margin-top: 300px; 
-	}
-}
-@media (max-width: 1110px) {
-	#genre_comedy{
-		overflow: hidden;
-		height: 400px;
-		top: 1450px;
-	}
-	#genre_romance{
-		overflow: hidden;
-		height: 400px;
-		top: 150px;
-		top: 1450px;
+		margin-top: 200px; 
 	}
 }
 
 
 @media (max-width: 800px) {
 	#genre_actions{
-		overflow: hidden;
-		height: 400px;
+
 		top: 140px;
 	}
 	#genre_adventure{
-		overflow: hidden;
-		height: 400px;
 		top: 150px;
 	}
 	#genre_comedy{
-		overflow: hidden;
-		height: 400px;
 		top: 150px;
 	}
 	#genre_romance{
-		overflow: hidden;
-		height: 400px;
 		top: 150px;
 	}
 	
