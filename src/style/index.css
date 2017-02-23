@@ -131,6 +131,7 @@ a h3 {
     -moz-transition-delay: 100ms;
     transition-delay: 100ms;
 }
+
 .frontpage-movies-img {
 	-webkit-transition: all 800ms;
     -moz-transition: all 800ms;
@@ -300,13 +301,6 @@ hr {
 }
 
 /* Movie class {each movies}*/
-.movies {
-	border: 0px solid white;
-	box-sizing: content-box;
-	background-color: white;
-	margin-bottom: 50px;
-	height: auto;
-}
 
 .text > p{
 	width: 200px;
@@ -319,13 +313,10 @@ hr {
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
-.images {
-	margin-left: -15px;
-	height: 300px; 
-}
 .load-more {
 	position: relative;
 	left: 50%;
+	top: 20px;
 	transform: translateX(-50%);
 }
 

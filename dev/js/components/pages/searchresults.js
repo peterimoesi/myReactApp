@@ -55,9 +55,9 @@ class SearchResults extends React.Component {
 		const AllResults = data.map((value, index) =>{
 
 				return (
-						<li key = {index} className = "col-lg-3 col-md-6 col-xs-6 list-scrolling-2 frontpage-movies" onClick = {() => this.open(value, index)}>
+						<li key = {index} className = "col-lg-3 col-md-3 col-xs-6 list-scrolling-2 frontpage-movies" onClick = {() => this.open(value, index)}>
 							<img className = "img img-thumbnail frontpage-movies-img" src = {"https://image.tmdb.org/t/p/w640" + value.poster_path} />
-							<figcaption><h5 className = "frontpage-movies-caption">{value.original_title}</h5></figcaption>
+							<figcaption><h3 className = "frontpage-movies-caption">{value.original_title}</h3></figcaption>
 						</li>
 					) 
 			})

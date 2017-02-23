@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-
-import MovieClass from '../../navigation/movieTopNav.js'
-import Genre from '../../navigation/movieGenreNav.js'
+import MyModal from '../dataModal';
+import MovieClass from '../../navigation/movieTopNav.js';
+import Genre from '../../navigation/movieGenreNav.js';
 
 
 class RatedMovies extends React.Component{
@@ -12,7 +12,9 @@ class RatedMovies extends React.Component{
 
 		this.state = {
 			page: 1,
-			data: []
+			data: [],
+			showModal: false,
+			modalValue: [null, null, null],
 		}
 	}
 
@@ -26,6 +28,20 @@ class RatedMovies extends React.Component{
 			
 		})
 	}
+	close(){
+		
+		this.setState({
+			showModal: false
+		})
+	}
+	//open modal
+	open(value, e){
+		//	console.log(value, e)
+			this.setState({
+				showModal: true,
+				modalValue: [value.original_title, value.overview, value.poster_path]
+			})
+		}
 
 	loadItems() {
 		
@@ -54,43 +70,31 @@ class RatedMovies extends React.Component{
 		const {data} = this.state;
 
 		const AllResults = data.map((value, index) =>{
-
-			if(index % 2 !== 0) {
 				return (
-						<div className = "col-lg-5 col-lg-offset-1 col-md-2 col-xs-12 movies" key = {index}>
-							<div className = "row">
-								<img className = "col-lg-6 col-xs-5 img img-responsive images" src = {"https://image.tmdb.org/t/p/w640" + value.poster_path} />
-								
-								<div className = "col-lg-6 col-xs-5 text">
-									<h3>{value.original_title}</h3>
-									<h6>{value.vote_average}</h6>
-									<p>{value.overview}</p>
-								</div>
-							</div>
-						</div>
+						<li key = {index} className = "col-lg-3 col-md-3 col-xs-6 list-scrolling-2 frontpage-movies" onClick = {() => this.open(value, index)}>
+							<img className = "img img-thumbnail frontpage-movies-img" src = {"https://image.tmdb.org/t/p/w640" + value.poster_path} />
+							<figcaption><h5 className = "frontpage-movies-caption">{value.original_title}</h5></figcaption>
+						</li>
 					)
-			} else {
-				return (
-						<div className = "col-lg-5 col-md-23 col-xs-12 movies" key = {index}>
-							<div className = "row">
-								<img className = "col-lg-6 col-xs-5 img img-responsive images" src = {"https://image.tmdb.org/t/p/w640" + value.poster_path} />
-								<div className = "col-lg-6 col-xs-5 text">
-									<h3>{value.original_title}</h3>
-									<h6>{value.vote_average}</h6>
-									<p>{value.overview}</p>
-								</div>
-							</div>
-						</div>
-					)}
 			
 			})
 
-		return (<div className = "container-fluid">
+		return (
+				<div className = "container-fluid">
 					<MovieClass />
-					<div className = "container movielists">
-						<div className = "row">{AllResults}</div>
-						<button onClick = {this.loadItems.bind(this)} className = "btn btn-default load-more">Load more</button>
+					<div className = "container all-gird" id = "all-gird">
+
+						<div className = "my-modal">
+
+							<MyModal show={this.state.showModal} onHide = {this.close.bind(this)}>{this.state.modalValue}</MyModal>
+						</div>
+						<div className = "row all-class-movies">
+							<ul className = "row scroll">
+								{AllResults}
+							</ul>
+						</div>
 					</div>
+					<button onClick = {this.loadItems.bind(this)} className = "btn btn-default load-more">Load more</button>
 					<Genre />
 				</div>
 			)
